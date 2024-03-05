@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Button from '@mui/material/Button';
+import './App.css';
+import { useState } from 'react';
+import FormView from './components/Form';
 function App() {
+  const [getId,setId]=useState("")
+  const [getValue,setValue]=useState({})
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+   {getId ?   <FormView id={getId} setId={setId} setValue={setValue} ></FormView> : 
+   <>
+    <h1>Hello User</h1>
+     <Button onClick={()=>setId("Thermometer-ABC123")} >
+      Thermometer-ABC123
+     </Button>
+   </> }
     </div>
   );
 }

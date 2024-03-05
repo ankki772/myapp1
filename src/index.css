@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.List
+{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+    padding: 0;
+  justify-content: space-around;
+}
+.btn
+{
+  display: block !important;
+  width: 70%;
+ 
+}
+.btn :hover{
+  background-color: #c42121 !important;
+}
